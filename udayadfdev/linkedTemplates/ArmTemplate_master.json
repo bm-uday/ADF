@@ -1,0 +1,99 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "udayadfdev"
+		},
+		"AzureDataLakeStoragesink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStoragesink'"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'",
+			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=udaydb12server.database.windows.net;Initial Catalog=udaydb12;User ID=azure"
+		},
+		"AzureDataLakeStoragesink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://udaydatalakedevsink.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStoragesource_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://devdlakesa.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStoragesource_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "6610e945-128a-4fa6-a2fa-8a2c75eb6e1e"
+		},
+		"AzureDataLakeStoragesource_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "4d51c714-f985-4da2-aecc-4c0e40ffe134"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://udaydevkv.vault.azure.net/"
+		},
+		"RestService_source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://airlabs.co/api/v9/airlines"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "udayadfdev_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStoragesink_accountKey": {
+						"value": "[parameters('AzureDataLakeStoragesink_accountKey')]"
+					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"AzureDataLakeStoragesink_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStoragesink_properties_typeProperties_url')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"RestService_source_properties_typeProperties_url": {
+						"value": "[parameters('RestService_source_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStoragesource_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStoragesource_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStoragesource_properties_typeProperties_tenant": {
+						"value": "[parameters('AzureDataLakeStoragesource_properties_typeProperties_tenant')]"
+					},
+					"AzureDataLakeStoragesource_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('AzureDataLakeStoragesource_properties_typeProperties_servicePrincipalId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

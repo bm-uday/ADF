@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "udayadfdev"
+		},
+		"AzureDataLakeStoragesink_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=udaydb12server.database.windows.net;Initial Catalog=udaydb12;User ID=azure"
+		},
+		"AzureDataLakeStoragesink_properties_typeProperties_url": {
+			"value": "https://udaydatalakedevsink.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStoragesource_properties_typeProperties_url": {
+			"value": "https://devdlakesa.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStoragesource_properties_typeProperties_tenant": {
+			"value": "6610e945-128a-4fa6-a2fa-8a2c75eb6e1e"
+		},
+		"AzureDataLakeStoragesource_properties_typeProperties_servicePrincipalId": {
+			"value": "4d51c714-f985-4da2-aecc-4c0e40ffe134"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://udaydevkv.vault.azure.net/"
+		},
+		"RestService_source_properties_typeProperties_url": {
+			"value": "https://airlabs.co/api/v9/airlines"
+		}
+	}
+}
