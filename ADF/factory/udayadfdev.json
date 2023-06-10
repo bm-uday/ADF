@@ -1,0 +1,9 @@
+{
+	"name": "udayadfdev",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "12da642a-1456-40ce-9259-082c4ab78960",
+		"tenantId": "6610e945-128a-4fa6-a2fa-8a2c75eb6e1e"
+	}
+}
