@@ -24,6 +24,10 @@
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'",
 			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=udaydb12server.database.windows.net;Initial Catalog=udaydb12;User ID=azure"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
 		"AzureDataLakeStoragesink_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://udaydatalakedevsink.dfs.core.windows.net/"
@@ -87,6 +91,9 @@
 					},
 					"AzureDatabricksDeltaLake_accessToken": {
 						"value": "[parameters('AzureDatabricksDeltaLake_accessToken')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
