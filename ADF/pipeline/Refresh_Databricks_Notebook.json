@@ -15,6 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"notebookPath": "/geekcoders/Run_Notebooks",
 					"baseParameters": {
 						"Layer_Name": {
 							"value": "@pipeline().parameters.Layer_Name",

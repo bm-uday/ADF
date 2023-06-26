@@ -88,6 +88,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.layer_names_to_run",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Execute Pipeline5",
