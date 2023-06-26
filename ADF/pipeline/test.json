@@ -40,7 +40,13 @@
 				"inputs": [
 					{
 						"referenceName": "AzureDatabricksDeltaLakeDataset1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"table_name": {
+								"value": "airport",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
