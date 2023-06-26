@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStoragesink'"
 		},
+		"AzureDatabricksDeltaLake_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLake'"
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'",
@@ -69,6 +73,9 @@
 					},
 					"AzureDataLakeStoragesink_accountKey": {
 						"value": "[parameters('AzureDataLakeStoragesink_accountKey')]"
+					},
+					"AzureDatabricksDeltaLake_accessToken": {
+						"value": "[parameters('AzureDatabricksDeltaLake_accessToken')]"
 					},
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
