@@ -8,6 +8,9 @@
 		"AzureDataLakeStoragesink_accountKey": {
 			"value": ""
 		},
+		"AzureDatabricks_accessToken": {
+			"value": ""
+		},
 		"AzureDatabricksDeltaLake_accessToken": {
 			"value": ""
 		},
@@ -25,6 +28,9 @@
 		},
 		"AzureDataLakeStoragesource_properties_typeProperties_servicePrincipalId": {
 			"value": "4d51c714-f985-4da2-aecc-4c0e40ffe134"
+		},
+		"AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"value": "0626-101340-yr6dhr2u"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://udaydevkv.vault.azure.net/"
