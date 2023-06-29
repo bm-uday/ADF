@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "udayadfdev"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStoragesink_accountKey": {
 			"value": ""
 		},
@@ -16,9 +19,6 @@
 		},
 		"AzureSqlDatabase1_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=udaydb12server.database.windows.net;Initial Catalog=udaydb12;User ID=azure"
-		},
-		"AzureBlobStorage1_connectionString": {
-			"value": ""
 		},
 		"AzureDataLakeStoragesink_properties_typeProperties_url": {
 			"value": "https://udaydatalakedevsink.dfs.core.windows.net/"
